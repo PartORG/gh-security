@@ -7,9 +7,9 @@ A super simple example repository!
 
 ## Introduction
 
-Welcome to Example Repo! This is a simple repository designed to demonstrate basic GitHub workflows and practices. It includes example workflows for labeling issues and preventing script injection, as well as some common files like `.gitignore` and `README.md`.
+Welcome to Example Repo! This is a super simple example repository designed to demonstrate basic GitHub Actions workflows and best practices. The primary focus of this project is to show how you can automate issue labeling and prevent script injection in your repositories.
 
-This project is intended for anyone looking to understand how to set up and use GitHub workflows in their own repositories.
+This project is intended for anyone looking to learn more about GitHub Actions, automation, and security best practices. It provides a practical example of how to set up and use these tools effectively.
 
 ## Table of Contents
 
@@ -22,47 +22,31 @@ This project is intended for anyone looking to understand how to set up and use 
 - [Quick Start](#quick-start)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
+- [Development](#development)
 
 ## Features
 
-### Issue Labeling Workflow
-
-This workflow automatically labels issues based on their content. It helps maintainers quickly identify and prioritize issues.
+### Issue Labeling
+Automatically labels issues based on their content. This helps maintainers quickly identify and prioritize issues.
 
 ### Script Injection Prevention
-
-The repository includes a script injection prevention workflow that scans pull requests for potentially harmful code snippets.
+Prevents script injection by checking for potentially harmful patterns in issue comments and pull requests.
 
 ## How It Works
 
-Example Repo uses GitHub Actions to automate workflows. The workflows are defined in the `.github/workflows` directory.
-
-### ASCII Diagram
-
-```plaintext
-+-------------------+
-|  Issue Labeling   |
-|  Workflow         |
-+---------+---------+
-          |
-          v
-+---------+---------+
-|  Script Injection |
-|  Prevention     |
-+-------------------+
-```
+The repository uses GitHub Actions workflows to automate the labeling of issues and prevent script injection. The workflows are triggered automatically when an issue or pull request is opened or edited.
 
 ## Technology Stack
 
 | Technology | Purpose |
 |------------|---------|
-| GitHub Actions | Automates workflows |
-| Python | For script injection detection |
+| GitHub Actions | Automates the labeling of issues and prevents script injection. |
+| Python | Used for scripting and automation tasks. |
 
 ## Requirements
 
-- A GitHub account with repository creation permissions.
-- Basic knowledge of GitHub and Git.
+- A GitHub account with access to create repositories.
+- Basic knowledge of GitHub Actions and Python.
 
 ## Installation
 
@@ -74,39 +58,26 @@ git clone https://github.com/PartORG/gh-security.git
 
 ## Configuration
 
-No additional configuration is required for the workflows. They will automatically run when issues or pull requests are created in the repository.
+The repository includes a `.github/workflows` directory containing the workflows for issue labeling and script injection prevention. You can customize these workflows as needed.
 
 ## Quick Start
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/PartORG/gh-security.git
-   ```
-2. Navigate to the repository directory:
-   ```sh
-   cd gh-security
-   ```
+1. Clone the repository to your local machine.
+2. Navigate to the `.github/workflows` directory.
+3. Review and modify the workflows as necessary.
 
 ## Usage
 
-To trigger the workflows, create an issue or a pull request in your local copy of the repository.
-
-### Issue Labeling
-
-When you create an issue, the `label-issues-real.yml` workflow will automatically label it based on its content.
-
-### Script Injection Prevention
-
-When you open a pull request, the `script-injection.yml` workflow will scan for potentially harmful code snippets.
+To use the GitHub Actions workflows, simply open an issue or pull request in your repository. The workflows will automatically run and apply labels or prevent script injection based on the content of the issue or pull request.
 
 ## Project Structure
 
-```plaintext
-.
+```
+gh-security/
 ├── .github/
-│   ├── workflows/
-│   │   ├── label-issues-real.yml
-│   │   └── script-injection.yml
+│   └── workflows/
+│       ├── label-issues-real.yml
+│       └── script-injection.yml
 ├── .gitignore
 └── README.md
 ```
@@ -117,7 +88,7 @@ When you open a pull request, the `script-injection.yml` workflow will scan for 
 
 ## Development
 
-This repository is intended for demonstration purposes. No development workflow is provided beyond cloning and using the existing workflows.
+This repository is intended for learning purposes. If you have any suggestions or improvements, feel free to open an issue or submit a pull request.
 
 ## Testing
 
@@ -125,8 +96,8 @@ No tests are included in this repository.
 
 ## Limitations
 
-- The issue labeling workflow is based on simple string matching and may not cover all cases.
-- The script injection prevention workflow is a basic example and may need further refinement for production use.
+- The workflows are basic and may need customization based on specific use cases.
+- Script injection prevention is limited to checking for potentially harmful patterns.
 
 ## License
 
